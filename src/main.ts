@@ -2,7 +2,7 @@ const main = async () => {
   let duration = 1000
   while (true) {
     for (const likesEl of Array.from(document.querySelectorAll(`div[aria-label$='Like']`))) {
-      const viewsEl = likesEl.parentElement?.previousElementSibling?.previousElementSibling?.previousElementSibling
+      const viewsEl = likesEl.parentElement?.nextElementSibling
       colorize(likesEl as HTMLElement, viewsEl as HTMLElement | null | undefined)
     }
     for (const likesEl of Array.from(document.querySelectorAll(`a[href$="/likes"]`))) {
